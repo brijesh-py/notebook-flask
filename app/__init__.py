@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_cors import CORS
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
-app.secret_key = "secret_key"
+app.secret_key = "m$w%a[EaYQWjzirJr|Nld$Fz)-ggJshDi|"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
 
 api = Api(app)
