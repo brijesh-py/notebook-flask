@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteBook - Flask</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body class="w3-light">
+    <!-- header -->
+    <div class="w3-padding w3-green w3-text-white w3-center w3-border-bottom">
+      <h1>NoteBook - Flask</h1>
+    </div>
+    <!-- notebooks list -->
+    <div class="w3-container">
+      <div class="w3-containerm w3-padding w3-margin-top">
+        <input
+          type="text"
+          id="search-notebook"
+          class="w3-input w3-border w3-white"
+          id="search-notebooks"
+          placeholder="Search"
+          title="Search"
+        />
+      </div>
+      <div class="w3-padding w3-container">
+        <h4>
+          NoteBooks
+          <i
+            class="fa fa-refresh w3-margin-left"
+            id="refresh-btn"
+            title="Refresh"
+          ></i>
+        </h4>
+        <div class="container-fluid" id="show-notebooks"></div>
+      </div>
+    </div>
+    <!-- model open -->
+    <i
+      class="fa fa-plus w3-text-green w3-white w3-padding w3-card w3-round"
+      id="model-open"
+      title="New Notebook"
+    ></i>
+    <!-- new note book model -->
+    <div id="note-book-modal" class="w3-padding hidden">
+      <!-- Modal content -->
+      <div class="w3-container w3-padding-16 w3-card w3-round w3-pale-green">
+        <i class="fa fa-close w3-text-red" id="model-close"></i>
+        <h4><strong>New NoteBook</strong></h4>
+        <input
+          class="w3-input w3-border w3-margin-bottom w3-pale-green"
+          type="text"
+          id="new-notebook-title"
+          placeholder="NoteBook Title"
+          title="NoteBook Title"
+        />
+        <div
+          id="new-notebook-content"
+          placeholder="NoteBook Content"
+          contenteditable="true"
+          class="w3-input w3-border w3-pale-green"
+          title="NoteBook Content"
+        >
+          <p>NoteBook Content</p>
+        </div>
+        <button
+          title="Create"
+          class="w3-btn w3-green w3-margin-top"
+          id="new-notebook-btn"
+        >
+          CREATE
+        </button>
+        <button
+          title="Update"
+          class="w3-btn w3-green w3-margin-top"
+          id="update-notebook-btn"
+        >
+          UPDATE
+        </button>
+      </div>
+    </div>
+    <!-- js -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../static/js/index.js"></script>
+  </body>
+</html>
